@@ -46,8 +46,9 @@ for y3 in year3Info.keys():
     for y2 in year2Info.keys():
         for y1 in year1Info.keys():
             for m6 in month6info.keys():
-                if year3Info[y3]==year2Info[y2]==year1Info[y1]==month6info[m6]:
-                    totalFund[y3]=year3Info[y3]
+                for m3 in month3info.keys():
+                    if year3Info[y3]==year2Info[y2]==year1Info[y1]==month6info[m6]==month3info[m3]:
+                        totalFund[y3]=year3Info[y3]
 
 for i in totalFund.keys():
     print i,totalFund[i]
